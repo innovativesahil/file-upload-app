@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Dropzone from "../dropzone/Dropzone";
 import "./Upload.css";
 import Progress from "../progress/Progress";
-
+import checkCircleIcon from "../../../images/uploader/baseline-check_circle_outline-24px.svg"
 class Upload extends Component {
   constructor(props) {
     super(props);
@@ -87,7 +87,7 @@ class Upload extends Component {
           <img
             className="CheckIcon"
             alt="done"
-            src="baseline-check_circle_outline-24px.svg"
+            src={checkCircleIcon}
             style={{
               opacity:
                 uploadProgress && uploadProgress.state === "done" ? 0.5 : 0
@@ -101,7 +101,7 @@ class Upload extends Component {
   renderActions() {
     if (this.state.successfullUploaded) {
       return (
-        <button
+        <button className = "btn btn-small btn-secondary"
           onClick={() =>
             this.setState({ files: [], successfullUploaded: false })
           }
@@ -111,7 +111,7 @@ class Upload extends Component {
       );
     } else {
       return (
-        <button
+        <button className = "btn btn-small btn-primary"
           disabled={this.state.files.length < 0 || this.state.uploading}
           onClick={this.uploadFiles}
         >
