@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/innovativesahil/file-upload-app.svg?token=xZryinhEM5sC7H15sLkt&branch=feature)](https://travis-ci.com/innovativesahil/file-upload-app)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
