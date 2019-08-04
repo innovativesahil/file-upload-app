@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Dropzone from "../dropzone/Dropzone";
 import "./Upload.css";
 import Progress from "../progress/Progress";
+import * as api from '../../../config/api';
 import checkCircleIcon from "../../../images/uploader/baseline-check_circle_outline-24px.svg"
 class Upload extends Component {
   constructor(props) {
@@ -37,7 +38,7 @@ class Upload extends Component {
       this.setState({ successfullUploaded: true, uploading: false });
     } catch (e) {
       // Not Production ready! Do some error handling here instead...
-      this.setState({ successfullUploaded: true, uploading: false });
+      this.setState({ successfullUploaded: true, uploading: true });
     }
   }
 
@@ -73,7 +74,7 @@ class Upload extends Component {
       const formData = new FormData();
       formData.append("file", file, file.name);
 
-      req.open("POST", "http://localhost:8000/upload");
+      req.open("POST", api.base.development + api.file.upload);
       req.send(formData);
     });
   }
@@ -124,7 +125,7 @@ class Upload extends Component {
   render() {
     return (
       <div className="Upload">
-        <span className="Title">Upload Files</span>
+        <div className="Title"><strong>Upload Files</strong></div>
         <div className="Content">
           <div>
             <Dropzone

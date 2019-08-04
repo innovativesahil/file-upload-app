@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import "./UploadCard.css";
 import Upload from "./upload/Upload";
 
-class App extends Component {
+class UploadCard extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Panel">
         <div className="Card">
           <Upload />
         </div>
@@ -14,4 +14,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default UploadCard;

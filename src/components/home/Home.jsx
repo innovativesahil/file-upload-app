@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Header from '../header/Header';
 import Loader from '../loader/Loader';
-import ResultTable from '../tables/ResultTable'
-import DemoTable from '../tables/DemoTable';
+
+import Uploadcard from '../uploader/UploadCard';
+import CustomTabs from '../tabs/CustomTabs';
 export default class Home extends Component{
     constructor(props){
         super(props);
@@ -22,7 +23,9 @@ export default class Home extends Component{
                  <Header />
                  <Loader />
                  {/* <ResultTable /> */}
-                 <DemoTable />
+                 {/* <DemoTable /> */}
+                <Uploadcard />
+                <CustomTabs />
              </div>
         );
     }

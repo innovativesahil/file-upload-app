@@ -1,10 +1,10 @@
 module.exports = {
     base : {
-        development : "localhost:8080",
+        development : "http://localhost:8080/",
         production : "/"
     },
     file : {
-        upload : "",
-        download : ""
+        upload : "api/upload",
+        download : "api/files/{filename:.+}"
     }
 }
